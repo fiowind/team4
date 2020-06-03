@@ -252,9 +252,19 @@ impl sudo::Trait for Runtime {
 	type Call = Call;
 }
 
-/// Used for the module template in `./template.rs`
 impl template::Trait for Runtime {
 	type Event = Event;
+}
+
+parameter_types! {
+	pub const MinLength: usize = 1;
+	pub const MaxLength: usize = 512;
+}
+
+impl poe::Trait for Runtime {
+	type Event = Event;
+	type MinLength = MinLength;
+	type MaxLength = MaxLength;
 }
 
 construct_runtime!(
@@ -271,8 +281,8 @@ construct_runtime!(
 		Balances: balances::{Module, Call, Storage, Config<T>, Event<T>},
 		TransactionPayment: transaction_payment::{Module, Storage},
 		Sudo: sudo::{Module, Call, Config<T>, Storage, Event<T>},
-		// Used for the module template in `./template.rs`
 		TemplateModule: template::{Module, Call, Storage, Event<T>},
+		Poe: poe::{Module, Call, Storage, Event<T>},
 	}
 );
 
