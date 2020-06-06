@@ -12,20 +12,23 @@
 **第一题：实现存证模块的功能，包括：**
 
 * 创建存证，可调用函数所接收参数为内容的哈希值 Vec<u8>；
-![task_1.1] (./images/1_claim_storage.png)
-![task_1.1] (./images/1_claim_claim.png)
+
+![task2.1](./watching-substrate.png)
+![task_1.1](./images/1_create_claim.png) 
+![task_1.1](./images/1_claim_storage.png)
 * 撤销存证，可调用函数所接收参数为内容的哈希值 Vec<u8>。
-![task_1.2] (./images/2_revoke_claim_alice.png)
-![task_1.2] (./images/2_storage_after_revoke.png)
+
+![task_1.2](./images/2_revoke_claim_alice.png)
+![task_1.2](./images/2_storage_after_revoke.png)
 
 **第二题：为存证模块添加新的功能，**
 
 * 转移存证，接收两个参数，一个是内容的哈希值，另一个是存证的接收账户地址；当存证不存在或者发送请求的用户不是存证内容的拥有人时，返回错误；当所有的检查通过后，更新对应的存证记录，并触发一个事件。
 
-![task_2.1] (./images/3_create_claim_alice.png)
-![task_2.2] (./images/3_invalid_owner.png)
-![task_2.3] (./images/3_claim_not_exist.png)
-![task_2.4] (./images/3_transfer_claim.png)
+![task_2.1](./images/3_create_claim_alice.png)
+![task_2.2](./images/3_invalid_owner.png)
+![task_2.3](./images/3_claim_not_exist.png)
+![task_2.4](./images/3_transfer_claim.png)
 
 **第三题（附加题）：**
 
