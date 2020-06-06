@@ -12,15 +12,93 @@
 **第一题：实现存证模块的功能，包括：**
 
 * 创建存证，可调用函数所接收参数为内容的哈希值 Vec<u8>；
+
+1. Alice Create Claim Start
+
+   ![](./screenshots/Alice_Create_Claim_Start.png)
+
+2. Alice Create Claim Queued
+
+   ![](./screenshots/Alice_Create_Claim_Queued.png)
+
+3. Alice Create Claim Success
+
+   ![](./screenshots/Alice_Create_Claim_Success.png)
+
+4. Alice Create Claim again and Get ProofAlreadyClaimed Error
+
+   ![](./screenshots/Alice_Error_ProofAlreadyClaimed.png)         
+
 * 撤销存证，可调用函数所接收参数为内容的哈希值 Vec<u8>。
+
+1. Alice Revoke Non-existing Claim
+
+   ![](./screenshots/Alice_Revoke_NonExistingClaim.png)
+
+2. Alice Get NoSuchProof Error
+
+   ![](./screenshots/Alice_Revoke_Claim_Error_NoSuchProof.png)
+
+3. Bob Revoke Alice's Claim
+
+   ![](./screenshots/Bob_Revoke_Alice_Claim.png)
+
+4. Bob Get NotProofOwner Error
+
+   ![](./screenshots/Bob_Revoke_Claim_Error_NotProofOwner.png)
+
+5. Alice Revoke Claim Start
+
+   ![](./screenshots/Alice_Revoke_Claim_Start.png)
+
+6. Alice Revoke Claim Queued
+
+   ![](./screenshots/Alice_Revoke_Claim_Queued.png)
+
+7. Alice Revoke Claim Success
+
+   ![](./screenshots/Alice_Revoke_Claim_Success.png)
+   
 
 **第二题：为存证模块添加新的功能，**
 
 * 转移存证，接收两个参数，一个是内容的哈希值，另一个是存证的接收账户地址；当存证不存在或者发送请求的用户不是存证内容的拥有人时，返回错误；当所有的检查通过后，更新对应的存证记录，并触发一个事件。
 
+1. Alice Transfer Non-Existing Claim
+
+   ![](./screenshots/Alice_Transfer_Non-Existing_Claim.png)
+
+2. Alice Get NoSuchProof Error
+
+   ![](./screenshots/Alice_Transfer_Claim_Error_NoSuchProof.png)
+
+3. Alice Create Claim Success
+
+   ![](./screenshots/Alice_Create_Claim_Success.png)
+
+4. Bob Transfer Alice's Claim Start
+
+   ![](./screenshots/Bob_Transfer_Alice_Claim_Start.png)
+
+5. Bob Get NotProofOwner Error
+
+   ![](./screenshots/Bob_Transfer_Alice_Claim_Error_NotProofOwner.png)
+
+6. Alice Transfer Claim Success
+
+   ![](./screenshots/Alice_Transfer_Claim_Success)   
+
 **第三题（附加题）：**
 
 * 创建存证时，为存证内容的哈希值设置界限，如果超出界限，返回错误。
+
+1. Alice Create Too Large Claim (10 bytes, while max 9 bytes)
+
+   ![](./screenshots/Alice_Create_Too_Large_Claim.png)
+
+2. Alice Get TooLargeProof Error
+
+   ![](./screenshots/Alice_Create_Claim_Error_TooLargeProof.png)
 
 ### 参考资料
 
