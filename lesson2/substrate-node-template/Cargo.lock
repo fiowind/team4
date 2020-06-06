@@ -945,50 +945,50 @@ dependencies = [
 [[package]]
 name = "frame-benchmarking"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "linregress",
  "parity-scale-codec",
  "paste",
- "sp-api",
- "sp-io",
- "sp-runtime",
- "sp-runtime-interface",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "frame-executive"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "parity-scale-codec",
  "serde",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-tracing",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-tracing 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "frame-metadata"
 version = "11.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-std",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "frame-support"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "bitmask",
  "frame-metadata",
@@ -1000,20 +1000,20 @@ dependencies = [
  "paste",
  "serde",
  "smallvec 1.4.0",
- "sp-arithmetic",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-tracing",
+ "sp-arithmetic 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-tracing 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "frame-support-procedural"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support-procedural-tools",
  "proc-macro2",
@@ -1024,7 +1024,7 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support-procedural-tools-derive",
  "proc-macro-crate",
@@ -1036,7 +1036,7 @@ dependencies = [
 [[package]]
 name = "frame-support-procedural-tools-derive"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "proc-macro2",
  "quote 1.0.6",
@@ -1046,17 +1046,17 @@ dependencies = [
 [[package]]
 name = "frame-system"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-version",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -2624,12 +2624,12 @@ dependencies = [
  "sc-service",
  "sc-transaction-pool",
  "sp-consensus",
- "sp-consensus-aura",
- "sp-core",
- "sp-finality-grandpa",
- "sp-inherents",
- "sp-runtime",
- "sp-transaction-pool",
+ "sp-consensus-aura 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-finality-grandpa 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "structopt",
  "substrate-build-script-utils",
 ]
@@ -2644,25 +2644,25 @@ dependencies = [
  "pallet-aura",
  "pallet-balances",
  "pallet-grandpa",
+ "pallet-poe",
  "pallet-randomness-collective-flip",
  "pallet-sudo",
- "pallet-template",
  "pallet-timestamp",
  "pallet-transaction-payment",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-block-builder",
- "sp-consensus-aura",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-offchain",
- "sp-runtime",
- "sp-session",
- "sp-std",
- "sp-transaction-pool",
- "sp-version",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-block-builder 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-consensus-aura 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-offchain 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-session 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
  "substrate-wasm-builder-runner",
 ]
 
@@ -2808,7 +2808,7 @@ dependencies = [
 [[package]]
 name = "pallet-aura"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -2816,48 +2816,48 @@ dependencies = [
  "pallet-timestamp",
  "parity-scale-codec",
  "serde",
- "sp-application-crypto",
- "sp-consensus-aura",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-application-crypto 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-consensus-aura 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-timestamp 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-balances"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-finality-tracker"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "serde",
- "sp-finality-tracker",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-finality-tracker 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-grandpa"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -2865,32 +2865,45 @@ dependencies = [
  "pallet-session",
  "parity-scale-codec",
  "serde",
- "sp-application-crypto",
- "sp-core",
- "sp-finality-grandpa",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
+ "sp-application-crypto 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-finality-grandpa 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-session 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-staking 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "pallet-poe"
+version = "2.0.0-rc2"
+dependencies = [
+ "frame-support",
+ "frame-system",
+ "parity-scale-codec",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-randomness-collective-flip"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "parity-scale-codec",
  "safe-mix",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-session"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -2898,43 +2911,31 @@ dependencies = [
  "pallet-timestamp",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-session",
- "sp-staking",
- "sp-std",
- "sp-trie",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-session 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-staking 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-sudo"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "parity-scale-codec",
  "serde",
- "sp-io",
- "sp-runtime",
- "sp-std",
-]
-
-[[package]]
-name = "pallet-template"
-version = "2.0.0-rc2"
-dependencies = [
- "frame-support",
- "frame-system",
- "parity-scale-codec",
- "sp-core",
- "sp-io",
- "sp-runtime",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-timestamp"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-benchmarking",
  "frame-support",
@@ -2942,37 +2943,37 @@ dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "serde",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-timestamp 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-transaction-payment"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "frame-system",
  "pallet-transaction-payment-rpc-runtime-api",
  "parity-scale-codec",
  "smallvec 1.4.0",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
 name = "pallet-transaction-payment-rpc-runtime-api"
 version = "2.0.0-rc2"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "frame-support",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-runtime",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -3907,13 +3908,13 @@ dependencies = [
  "sc-client-api",
  "sc-proposer-metrics",
  "sc-telemetry",
- "sp-api",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-transaction-pool",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
  "tokio-executor 0.2.0-alpha.6",
 ]
@@ -3925,13 +3926,13 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "parity-scale-codec",
  "sc-client-api",
- "sp-api",
- "sp-block-builder",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-block-builder 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-runtime",
- "sp-state-machine",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -3946,8 +3947,8 @@ dependencies = [
  "serde",
  "serde_json",
  "sp-chain-spec",
- "sp-core",
- "sp-runtime",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -3989,13 +3990,13 @@ dependencies = [
  "sc-tracing",
  "serde_json",
  "sp-blockchain",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-keyring",
- "sp-panic-handler",
- "sp-runtime",
- "sp-state-machine",
- "sp-utils",
- "sp-version",
+ "sp-panic-handler 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "structopt",
  "substrate-prometheus-endpoint",
  "time",
@@ -4019,22 +4020,22 @@ dependencies = [
  "parking_lot 0.10.2",
  "sc-executor",
  "sc-telemetry",
- "sp-api",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-database",
- "sp-externalities",
- "sp-inherents",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-keyring",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-storage",
- "sp-transaction-pool",
- "sp-trie",
- "sp-utils",
- "sp-version",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-storage 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
 ]
 
@@ -4059,11 +4060,11 @@ dependencies = [
  "sc-state-db",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-database",
- "sp-runtime",
- "sp-state-machine",
- "sp-trie",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
 ]
 
@@ -4075,7 +4076,7 @@ dependencies = [
  "sc-client-api",
  "sp-blockchain",
  "sp-consensus",
- "sp-runtime",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4094,18 +4095,18 @@ dependencies = [
  "sc-consensus-slots",
  "sc-keystore",
  "sc-telemetry",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-block-builder 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-consensus-aura",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-runtime",
- "sp-timestamp",
- "sp-version",
+ "sp-consensus-aura 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-timestamp 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
 ]
 
@@ -4121,14 +4122,14 @@ dependencies = [
  "parking_lot 0.10.2",
  "sc-client-api",
  "sc-telemetry",
- "sp-api",
- "sp-application-crypto",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-state-machine",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4145,16 +4146,16 @@ dependencies = [
  "parking_lot 0.10.2",
  "sc-executor-common",
  "sc-executor-wasmi",
- "sp-api",
- "sp-core",
- "sp-externalities",
- "sp-io",
- "sp-panic-handler",
- "sp-runtime-interface",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-panic-handler 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-serializer",
- "sp-trie",
- "sp-version",
- "sp-wasm-interface",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasmi",
 ]
 
@@ -4168,10 +4169,10 @@ dependencies = [
  "parity-scale-codec",
  "parity-wasm",
  "sp-allocator",
- "sp-core",
- "sp-runtime-interface",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-serializer",
- "sp-wasm-interface",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasmi",
 ]
 
@@ -4184,9 +4185,9 @@ dependencies = [
  "parity-scale-codec",
  "sc-executor-common",
  "sp-allocator",
- "sp-core",
- "sp-runtime-interface",
- "sp-wasm-interface",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasmi",
 ]
 
@@ -4214,16 +4215,16 @@ dependencies = [
  "sc-network-gossip",
  "sc-telemetry",
  "serde_json",
- "sp-api",
- "sp-arithmetic",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-arithmetic 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-finality-grandpa",
- "sp-finality-tracker",
- "sp-inherents",
- "sp-runtime",
- "sp-utils",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-finality-grandpa 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-finality-tracker 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
 ]
 
@@ -4240,7 +4241,7 @@ dependencies = [
  "sc-network",
  "sc-service",
  "sp-blockchain",
- "sp-runtime",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasm-timer",
 ]
 
@@ -4254,8 +4255,8 @@ dependencies = [
  "parking_lot 0.10.2",
  "rand 0.7.3",
  "serde_json",
- "sp-application-crypto",
- "sp-core",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "subtle 2.2.2",
 ]
 
@@ -4297,12 +4298,12 @@ dependencies = [
  "slog",
  "slog_derive",
  "smallvec 0.6.13",
- "sp-arithmetic",
+ "sp-arithmetic 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-runtime",
- "sp-utils",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
  "thiserror",
  "unsigned-varint",
@@ -4322,7 +4323,7 @@ dependencies = [
  "log",
  "lru",
  "sc-network",
- "sp-runtime",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasm-timer",
 ]
 
@@ -4345,11 +4346,11 @@ dependencies = [
  "sc-client-api",
  "sc-keystore",
  "sc-network",
- "sp-api",
- "sp-core",
- "sp-offchain",
- "sp-runtime",
- "sp-utils",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-offchain 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "threadpool",
 ]
 
@@ -4362,7 +4363,7 @@ dependencies = [
  "libp2p",
  "log",
  "serde_json",
- "sp-utils",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasm-timer",
 ]
 
@@ -4393,18 +4394,18 @@ dependencies = [
  "sc-keystore",
  "sc-rpc-api",
  "serde_json",
- "sp-api",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-chain-spec",
- "sp-core",
- "sp-offchain",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-offchain 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-rpc",
- "sp-runtime",
- "sp-session",
- "sp-state-machine",
- "sp-transaction-pool",
- "sp-utils",
- "sp-version",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-session 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4424,11 +4425,11 @@ dependencies = [
  "serde",
  "serde_json",
  "sp-chain-spec",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-rpc",
- "sp-runtime",
- "sp-transaction-pool",
- "sp-version",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4443,7 +4444,7 @@ dependencies = [
  "log",
  "serde",
  "serde_json",
- "sp-runtime",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4483,21 +4484,21 @@ dependencies = [
  "serde",
  "serde_json",
  "slog",
- "sp-api",
- "sp-application-crypto",
- "sp-block-builder",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-block-builder 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
  "sp-consensus",
- "sp-core",
- "sp-externalities",
- "sp-io",
- "sp-runtime",
- "sp-session",
- "sp-state-machine",
- "sp-transaction-pool",
- "sp-trie",
- "sp-utils",
- "sp-version",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-session 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
  "sysinfo",
  "tracing",
@@ -4515,7 +4516,7 @@ dependencies = [
  "parity-util-mem-derive",
  "parking_lot 0.10.2",
  "sc-client-api",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4568,10 +4569,10 @@ dependencies = [
  "parking_lot 0.10.2",
  "serde",
  "sp-blockchain",
- "sp-core",
- "sp-runtime",
- "sp-transaction-pool",
- "sp-utils",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasm-timer",
 ]
 
@@ -4590,13 +4591,13 @@ dependencies = [
  "parking_lot 0.10.2",
  "sc-client-api",
  "sc-transaction-graph",
- "sp-api",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-blockchain",
- "sp-core",
- "sp-runtime",
- "sp-tracing",
- "sp-transaction-pool",
- "sp-utils",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-tracing 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-transaction-pool 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
  "wasm-timer",
 ]
@@ -4932,9 +4933,24 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "derive_more",
  "log",
- "sp-core",
- "sp-std",
- "sp-wasm-interface",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-api"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "hash-db",
+ "parity-scale-codec",
+ "sp-api-proc-macro 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4944,12 +4960,24 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "hash-db",
  "parity-scale-codec",
- "sp-api-proc-macro",
- "sp-core",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-version",
+ "sp-api-proc-macro 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-api-proc-macro"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "blake2-rfc",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote 1.0.6",
+ "syn 1.0.25",
 ]
 
 [[package]]
@@ -4967,13 +4995,38 @@ dependencies = [
 [[package]]
 name = "sp-application-crypto"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "serde",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-application-crypto"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-std",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-arithmetic"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "integer-sqrt",
+ "num-traits 0.2.11",
+ "parity-scale-codec",
+ "serde",
+ "sp-debug-derive 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4985,8 +5038,20 @@ dependencies = [
  "num-traits 0.2.11",
  "parity-scale-codec",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-block-builder"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -4995,10 +5060,10 @@ version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5011,10 +5076,10 @@ dependencies = [
  "lru",
  "parity-scale-codec",
  "parking_lot 0.10.2",
- "sp-block-builder",
+ "sp-block-builder 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "sp-consensus",
- "sp-runtime",
- "sp-state-machine",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5039,14 +5104,28 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.10.2",
  "serde",
- "sp-core",
- "sp-inherents",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-utils",
- "sp-version",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-version 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-prometheus-endpoint",
+]
+
+[[package]]
+name = "sp-consensus-aura"
+version = "0.8.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-timestamp 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5055,12 +5134,54 @@ version = "0.8.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-application-crypto",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
- "sp-timestamp",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-timestamp 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-core"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "base58",
+ "blake2-rfc",
+ "byteorder",
+ "derive_more",
+ "ed25519-dalek",
+ "futures 0.3.5",
+ "hash-db",
+ "hash256-std-hasher",
+ "hex",
+ "impl-serde 0.3.1",
+ "lazy_static",
+ "libsecp256k1",
+ "log",
+ "merlin",
+ "num-traits 0.2.11",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.10.2",
+ "primitive-types",
+ "rand 0.7.3",
+ "regex",
+ "schnorrkel",
+ "serde",
+ "sha2",
+ "sp-debug-derive 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-storage 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "substrate-bip39",
+ "tiny-bip39",
+ "tiny-keccak",
+ "twox-hash",
+ "wasmi",
+ "zeroize",
 ]
 
 [[package]]
@@ -5092,11 +5213,11 @@ dependencies = [
  "schnorrkel",
  "serde",
  "sha2",
- "sp-debug-derive",
- "sp-externalities",
- "sp-runtime-interface",
- "sp-std",
- "sp-storage",
+ "sp-debug-derive 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-storage 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "substrate-bip39",
  "tiny-bip39",
  "tiny-keccak",
@@ -5117,6 +5238,16 @@ dependencies = [
 [[package]]
 name = "sp-debug-derive"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "proc-macro2",
+ "quote 1.0.6",
+ "syn 1.0.25",
+]
+
+[[package]]
+name = "sp-debug-derive"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "proc-macro2",
@@ -5127,12 +5258,39 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.8.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "environmental",
+ "parity-scale-codec",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-storage 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-externalities"
+version = "0.8.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "environmental",
  "parity-scale-codec",
- "sp-std",
- "sp-storage",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-storage 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-finality-grandpa"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "finality-grandpa",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5144,11 +5302,21 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-application-crypto",
- "sp-core",
- "sp-runtime",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-finality-tracker"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5157,8 +5325,20 @@ version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
- "sp-inherents",
- "sp-std",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-inherents"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "derive_more",
+ "parity-scale-codec",
+ "parking_lot 0.10.2",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5169,8 +5349,28 @@ dependencies = [
  "derive_more",
  "parity-scale-codec",
  "parking_lot 0.10.2",
- "sp-core",
- "sp-std",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-io"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "futures 0.3.5",
+ "hash-db",
+ "libsecp256k1",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.10.2",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5184,13 +5384,13 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "parking_lot 0.10.2",
- "sp-core",
- "sp-externalities",
- "sp-runtime-interface",
- "sp-state-machine",
- "sp-std",
- "sp-trie",
- "sp-wasm-interface",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-state-machine 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5199,9 +5399,19 @@ version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "lazy_static",
- "sp-core",
- "sp-runtime",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "strum",
+]
+
+[[package]]
+name = "sp-offchain"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5209,9 +5419,18 @@ name = "sp-offchain"
 version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
- "sp-api",
- "sp-core",
- "sp-runtime",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-panic-handler"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "backtrace",
+ "log",
 ]
 
 [[package]]
@@ -5229,7 +5448,28 @@ version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "serde",
- "sp-core",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-runtime"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "hash256-std-hasher",
+ "impl-trait-for-tuples",
+ "log",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "paste",
+ "rand 0.7.3",
+ "serde",
+ "sp-application-crypto 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-arithmetic 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5245,12 +5485,27 @@ dependencies = [
  "paste",
  "rand 0.7.3",
  "serde",
- "sp-application-crypto",
- "sp-arithmetic",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-std",
+ "sp-application-crypto 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-arithmetic 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-io 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-runtime-interface"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "primitive-types",
+ "sp-externalities 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface-proc-macro 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-tracing 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "static_assertions",
 ]
 
 [[package]]
@@ -5260,12 +5515,24 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "parity-scale-codec",
  "primitive-types",
- "sp-externalities",
- "sp-runtime-interface-proc-macro",
- "sp-std",
- "sp-tracing",
- "sp-wasm-interface",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime-interface-proc-macro 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-tracing 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-wasm-interface 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "static_assertions",
+]
+
+[[package]]
+name = "sp-runtime-interface-proc-macro"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "Inflector",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote 1.0.6",
+ "syn 1.0.25",
 ]
 
 [[package]]
@@ -5292,14 +5559,37 @@ dependencies = [
 [[package]]
 name = "sp-session"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-staking 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-session"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
- "sp-api",
- "sp-core",
- "sp-runtime",
- "sp-staking",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-staking 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-staking"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "parity-scale-codec",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
 ]
 
 [[package]]
@@ -5308,8 +5598,27 @@ version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-state-machine"
+version = "0.8.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "hash-db",
+ "log",
+ "num-traits 0.2.11",
+ "parity-scale-codec",
+ "parking_lot 0.10.2",
+ "rand 0.7.3",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-panic-handler 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "trie-db",
+ "trie-root",
 ]
 
 [[package]]
@@ -5323,13 +5632,18 @@ dependencies = [
  "parity-scale-codec",
  "parking_lot 0.10.2",
  "rand 0.7.3",
- "sp-core",
- "sp-externalities",
- "sp-panic-handler",
- "sp-trie",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-externalities 0.8.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-panic-handler 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-trie 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "trie-db",
  "trie-root",
 ]
+
+[[package]]
+name = "sp-std"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 
 [[package]]
 name = "sp-std"
@@ -5339,13 +5653,39 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 [[package]]
 name = "sp-storage"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "impl-serde 0.2.3",
+ "ref-cast",
+ "serde",
+ "sp-debug-derive 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-storage"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "impl-serde 0.2.3",
  "ref-cast",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-timestamp"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "wasm-timer",
 ]
 
 [[package]]
@@ -5355,11 +5695,19 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
- "sp-api",
- "sp-inherents",
- "sp-runtime",
- "sp-std",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-inherents 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasm-timer",
+]
+
+[[package]]
+name = "sp-tracing"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "tracing",
 ]
 
 [[package]]
@@ -5373,6 +5721,21 @@ dependencies = [
 [[package]]
 name = "sp-transaction-pool"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "derive_more",
+ "futures 0.3.5",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-api 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-transaction-pool"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "derive_more",
@@ -5380,9 +5743,23 @@ dependencies = [
  "log",
  "parity-scale-codec",
  "serde",
- "sp-api",
- "sp-runtime",
- "sp-utils",
+ "sp-api 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-utils 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-trie"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "hash-db",
+ "memory-db",
+ "parity-scale-codec",
+ "sp-core 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "trie-db",
+ "trie-root",
 ]
 
 [[package]]
@@ -5393,10 +5770,21 @@ dependencies = [
  "hash-db",
  "memory-db",
  "parity-scale-codec",
- "sp-core",
- "sp-std",
+ "sp-core 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "trie-db",
  "trie-root",
+]
+
+[[package]]
+name = "sp-utils"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "futures 0.3.5",
+ "futures-core",
+ "lazy_static",
+ "prometheus",
 ]
 
 [[package]]
@@ -5413,13 +5801,36 @@ dependencies = [
 [[package]]
 name = "sp-version"
 version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "impl-serde 0.2.3",
+ "parity-scale-codec",
+ "serde",
+ "sp-runtime 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-version"
+version = "2.0.0-rc2"
 source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 dependencies = [
  "impl-serde 0.2.3",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
+]
+
+[[package]]
+name = "sp-wasm-interface"
+version = "2.0.0-rc2"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+dependencies = [
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "sp-std 2.0.0-rc2 (git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2)",
+ "wasmi",
 ]
 
 [[package]]
@@ -5429,7 +5840,7 @@ source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a
 dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
- "sp-std",
+ "sp-std 2.0.0-rc2 (git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2)",
  "wasmi",
 ]
 
@@ -5557,7 +5968,7 @@ dependencies = [
 [[package]]
 name = "substrate-wasm-builder-runner"
 version = "1.0.6"
-source = "git+https://github.com/paritytech/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
+source = "git+https://gitee.com/greatliu/substrate.git?tag=v2.0.0-rc2#45b9f0a9cbf901abaa9f1fca5fe8baeed029133d"
 
 [[package]]
 name = "subtle"
