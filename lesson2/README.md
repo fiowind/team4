@@ -13,7 +13,6 @@
 
 * 创建存证，可调用函数所接收参数为内容的哈希值 Vec<u8>；
 
-![task2.1](./watching-substrate.png)
 ![task_1.1](./images/1_create_claim.png) 
 ![task_1.1](./images/1_claim_storage.png)
 * 撤销存证，可调用函数所接收参数为内容的哈希值 Vec<u8>。
