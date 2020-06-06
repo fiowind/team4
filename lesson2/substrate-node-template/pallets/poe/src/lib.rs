@@ -35,6 +35,7 @@ decl_event!(
 	pub enum Event<T> where AccountId = <T as system::Trait>::AccountId {
 		ClaimCreated(AccountId, Vec<u8>),
 		ClaimRevoked(AccountId, Vec<u8>),
+		ClaimTransferred(AccountId, Vec<u8>, AccountId),
 	}
 );
 
@@ -89,6 +90,23 @@ decl_module! {
 			Proofs::<T>::remove(&proof);
 
 			Self::deposit_event(RawEvent::ClaimRevoked(sender, proof));
+		}
+
+		#[weight = 10_000]
+		fn transfer_claim(origin, proof: Vec<u8>, receiver: T::AccountId) {
+			let sender = ensure_signed(origin)?;
+
+			ensure!(Proofs::<T>::contains_key(&proof), Error::<T>::NoSuchProof);
+
+			let (owner, _) = Proofs::<T>::get(&proof);
+
+			ensure!(sender == owner, Error::<T>::NotProofOwner);
+
+			let current_block = <system::Module<T>>::block_number();
+
+			Proofs::<T>::insert(&proof, (receiver.clone(), current_block));
+
+			Self::deposit_event(RawEvent::ClaimTransferred(sender, proof, receiver));
 		}
 	}
 }
