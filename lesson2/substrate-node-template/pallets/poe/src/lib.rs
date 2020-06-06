@@ -1,7 +1,5 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 
-/// A FRAME pallet poe with necessary imports
-
 use frame_support::{decl_module, decl_storage, decl_event, decl_error, StorageMap, ensure};
 use frame_system::{self as system, ensure_signed};
 use sp_std::prelude::Vec;
@@ -14,8 +12,6 @@ mod tests;
 
 /// The pallet's configuration trait.
 pub trait Trait: system::Trait {
-	// Add other types and constants required to configure this pallet.
-
 	/// The overarching event type.
 	type Event: From<Event<Self>> + Into<<Self as system::Trait>::Event>;
 }
@@ -47,7 +43,9 @@ decl_error! {
         /// The proof does not exist, so it cannot be revoked
         NoSuchProof,
         /// The proof is claimed by another account, so caller can't revoke it
-        NotProofOwner,
+		NotProofOwner,
+		/// The proof is too large,
+		ProofTooLarge,
 	}
 }
 
@@ -64,9 +62,15 @@ decl_module! {
 		// this is needed only if you are using events in your pallet
 		fn deposit_event() = default;
 
+
 		#[weight = 10_000]
 		fn create_claim(origin, proof: Vec<u8>) {
+			
+			const MAX_PROOF_SIZE: usize = 9;
+
 			let sender = ensure_signed(origin)?;
+
+			ensure!(proof.len() <= MAX_PROOF_SIZE, Error::<T>::ProofTooLarge);
 
 			ensure!(!Proofs::<T>::contains_key(&proof), Error::<T>::ProofAlreadyClaimed);
 
