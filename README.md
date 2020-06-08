@@ -32,7 +32,7 @@ git remote add upstream git@github.com:SubstrateCourse/<your-team>.git
 1. 首先在本地，切换到以自己名字命名的分支， Git命令为：
 
 ```
-git checkout <your-name>
+git checkout ylic
 ```
 
 替换`your-name`为自己的名字或Github账户名字，如果没有，联系助教进行添加。如何查找：
@@ -42,7 +42,7 @@ git checkout <your-name>
 2. 之后在本地，更新远端的代码到本地，Git命令为：
 
 ```
-git pull upstream <your-name>
+git pull upstream ylic
 ```
 
 替换`your-name`为自己的名字或Github账户名字，注意这里**不能**是master分支。
