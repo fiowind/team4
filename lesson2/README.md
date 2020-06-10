@@ -10,17 +10,49 @@
 4. 附加题不是必答的，但可以酌情加分。
 
 **第一题：实现存证模块的功能，包括：**
-
+* >程序运行的命令行截图
+  > ![star](./images/lesson2-poe-start-running.png)
+  
+  >存证所有事件
+  > ![star](./images/lesson2-proof-events.png)
+                                                                                                                                            
 * 创建存证，可调用函数所接收参数为内容的哈希值 Vec<u8>；
+  >创建成功
+  > ![star](./images/lesson2-proof-created-sucess.png)
+                     
+  >查看创建成功的Proof of exist
+  > ![star](./images/lesson2-proof-after-created.png)
+    
+  >存证存在时创建失败：
+  > ![star](./images/lesson2-proof-already-exist.png) 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 * 撤销存证，可调用函数所接收参数为内容的哈希值 Vec<u8>。
-
+  >撤销不存在的claim会出错：
+  > ![star](./images/lesson2-proof-revoke-not-found.png)
+  
+  >撤销不是owner会出错：
+  > ![star](./images/lesson2-proof-revoke-not-owner.png)
+                                                                                                                   
+  >成功撤销
+  > ![star](./images/lesson2-proof-revoke-sucess.png)
+   
+  >撤销claim后查看：
+  > ![star](./images/lesson2-proof-after-revoked.png)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 **第二题：为存证模块添加新的功能，**
 
 * 转移存证，接收两个参数，一个是内容的哈希值，另一个是存证的接收账户地址；当存证不存在或者发送请求的用户不是存证内容的拥有人时，返回错误；当所有的检查通过后，更新对应的存证记录，并触发一个事件。
+  >转移存证
+  > ![star](./images/lesson2-proof-transfering.png)
 
+  >转移存证成功的查询：
+  > ![star](./images/lesson2-proof-after-transfered.png)
+                                                                                                                                                                  
 **第三题（附加题）：**
 
 * 创建存证时，为存证内容的哈希值设置界限，如果超出界限，返回错误。
+  > ![star](./images/lesson2-proof-created-out-of-range.png)
+
 
 ### 参考资料
 
