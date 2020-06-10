@@ -9,11 +9,9 @@
 /// For more guidance on Substrate FRAME, see the example pallet
 /// https://github.com/paritytech/substrate/blob/master/frame/example/src/lib.rs
 
-use frame_system::ensure_signed;
-
 
 use frame_support::{decl_module, decl_storage, decl_event, decl_error,dispatch,ensure};
-use frame_system::{self as system};
+use frame_system::{self as system,ensure_signed};
 use sp_std::prelude::*;
 
 #[cfg(test)]
@@ -69,7 +67,7 @@ decl_error! {
 		ProofNotExist,
 		NotHavePermission,
 		CliamLenMin4Char,
-		CliamLenMax64Char
+		CliamLenMax64Char,
 	}
 }
 
