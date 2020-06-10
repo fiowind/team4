@@ -9,8 +9,9 @@
 /// For more guidance on Substrate FRAME, see the example pallet
 /// https://github.com/paritytech/substrate/blob/master/frame/example/src/lib.rs
 
-use frame_support::{decl_module, decl_storage, decl_event, decl_error, dispatch};
+use frame_support::{decl_module, decl_storage, decl_event, decl_error, ensure};
 use frame_system::{self as system, ensure_signed};
+use sp_std::vec::Vec;
 
 #[cfg(test)]
 mod mock;
@@ -35,7 +36,10 @@ decl_storage! {
 		// Just a dummy storage item.
 		// Here we are declaring a StorageValue, `Something` as a Option<u32>
 		// `get(fn something)` is the default getter which returns either the stored `u32` or `None` if nothing stored
-		Something get(fn something): Option<u32>;
+		// Something get(fn something): Option<u32>;
+		// 如果证明有所有者和证件号码，那么我们知道它已被要求保护！否则，可以要求证明。
+		Proofs: map hasher(blake2_128_concat) Vec<u8> => (T::AccountId, T::BlockNumber);
+		MaxLimit get(fn limit): Option<u32>;
 	}
 }
 
@@ -45,7 +49,12 @@ decl_event!(
 		/// Just a dummy event.
 		/// Event `Something` is declared with a parameter of the type `u32` and `AccountId`
 		/// To emit this event, we call the deposit function, from our runtime functions
-		SomethingStored(u32, AccountId),
+		// 索取证明后发出的事件。将新证明添加到区块链时。
+		ClaimCreated(AccountId, Vec<u8>),
+		// 所有者撤消索赔时发出的事件。移除证明时。
+		ClaimRevoked(AccountId, Vec<u8>),
+		ClaimTransfer(AccountId, Vec<u8>, AccountId),
+		MaxLimitSet(AccountId, u32),
 	}
 );
 
@@ -53,9 +62,13 @@ decl_event!(
 decl_error! {
 	pub enum Error for Module<T: Trait> {
 		/// Value was None
-		NoneValue,
+		// NoneValue,
 		/// Value reached maximum and cannot be incremented further
-		StorageOverflow,
+		// StorageOverflow,
+		ProofAlreadyClaimed,
+		NoSuchProof,
+		NoProofOwner,
+		OverMaxLimit,
 	}
 }
 
@@ -76,34 +89,53 @@ decl_module! {
 		/// function that can be called by the external world as an extrinsics call
 		/// takes a parameter of the type `AccountId`, stores it, and emits an event
 		#[weight = 10_000]
-		pub fn do_something(origin, something: u32) -> dispatch::DispatchResult {
-			// Check it was signed and get the signer. See also: ensure_root and ensure_none
-			let who = ensure_signed(origin)?;
+		fn create_claim(origin, proof: Vec<u8>) {
+			let sender = ensure_signed(origin)?;
+			let limit = match MaxLimit::get() {
+				None => {
+					let limit: u32 = 10;
+					MaxLimit::put(limit);
+					Self::deposit_event(RawEvent::MaxLimitSet(sender.clone(), limit));
+					limit
+				},
+				Some(limit) => limit,
+			};
+			ensure!(proof.len() <= limit as usize, Error::<T>::OverMaxLimit);
+			ensure!(!Proofs::<T>::contains_key(&proof), Error::<T>::ProofAlreadyClaimed);
+			let current_block = <system::Module<T>>::block_number();
 
-			// Code to execute when something calls this.
-			// For example: the following line stores the passed in u32 in the storage
-			Something::put(something);
-
-			// Here we are raising the Something event
-			Self::deposit_event(RawEvent::SomethingStored(something, who));
-			Ok(())
+			Proofs::<T>::insert(&proof, (&sender, current_block));
+			Self::deposit_event(RawEvent::ClaimCreated(sender, proof));
 		}
 
-		/// Another dummy entry point.
-		/// takes no parameters, attempts to increment storage value, and possibly throws an error
 		#[weight = 10_000]
-		pub fn cause_error(origin) -> dispatch::DispatchResult {
-			// Check it was signed and get the signer. See also: ensure_root and ensure_none
-			let _who = ensure_signed(origin)?;
+		fn revoke_claim(origin, proof: Vec<u8>) {
+			let sender = ensure_signed(origin)?;
+			ensure!(Proofs::<T>::contains_key(&proof), Error::<T>::NoSuchProof);
+			let (owner, _) = Proofs::<T>::get(&proof);
 
-			match Something::get() {
-				None => Err(Error::<T>::NoneValue)?,
-				Some(old) => {
-					let new = old.checked_add(1).ok_or(Error::<T>::StorageOverflow)?;
-					Something::put(new);
-					Ok(())
-				},
-			}
+			ensure!(sender == owner, Error::<T>::NoProofOwner);
+			Proofs::<T>::remove(&proof);
+			Self::deposit_event(RawEvent::ClaimRevoked(sender, proof));
+		}
+
+		#[weight = 10_000]
+		fn transfer_claim(origin, to: T::AccountId, proof: Vec<u8>) {
+			let sender = ensure_signed(origin)?;
+			ensure!(Proofs::<T>::contains_key(&proof), Error::<T>::NoSuchProof);
+			let (owner, _) = Proofs::<T>::get(&proof);
+			let current_block = <system::Module<T>>::block_number();
+
+			ensure!(sender == owner, Error::<T>::NoProofOwner);
+			Proofs::<T>::insert(&proof, (&to, current_block));
+			Self::deposit_event(RawEvent::ClaimTransfer(sender, proof, to));
+		}
+
+		#[weight = 10_000]
+		fn set_limit(origin, limit: u32) {
+			let sender = ensure_signed(origin)?;
+			MaxLimit::put(limit);
+			Self::deposit_event(RawEvent::MaxLimitSet(sender, limit));
 		}
 	}
 }
