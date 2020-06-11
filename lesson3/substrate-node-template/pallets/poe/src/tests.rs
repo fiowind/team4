@@ -5,7 +5,7 @@
 use super::*;
 use crate::{Error,mock::*};
 
-use frame_support::{assert_ok,assert_noop,assert_ne};
+use frame_support::{assert_ok,assert_noop};
 
 //teset cases for create_claim
 #[test]
@@ -69,6 +69,8 @@ fn remove_claim_failed_when_proof_not_exist(){
 	})
 }
 
+
+#[test]
 fn remove_claim_failed_when_not_have_permission(){
 	new_test_ext().execute_with(||{
 		let claim = vec![0,1,2,3];
@@ -82,7 +84,7 @@ fn remove_claim_failed_when_not_have_permission(){
 	})
 }
 
-
+#[test]
 fn remove_claim_work(){
 	new_test_ext().execute_with(||{
 		let claim = vec![0,1,2,3];
@@ -93,7 +95,7 @@ fn remove_claim_work(){
 		assert_ok!(PoeModule::create_claim(Origin::signed(1),claim.clone()));
 
 
-		assert_ne!(Proofs::<Test>::get(&claim),(1,system::Module::<Test>::block_number()));
+		assert_eq!(Proofs::<Test>::get(&claim),(1,system::Module::<Test>::block_number()));
 
 
 	})
