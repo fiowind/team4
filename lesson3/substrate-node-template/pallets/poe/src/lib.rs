@@ -257,7 +257,7 @@ decl_module! {
 
 		///  购买存证
 		#[weight = FunctionOf(
-			|(claim, price): (&Vec<u8>, &BalanceOf<T>)| (claim.len() * 10 + price / 100  + 10_000) as Weight,
+			|(claim, _): (&Vec<u8>, &BalanceOf<T>)| (claim.len() * 10  + 10_000) as Weight,
 			DispatchClass::Normal,
 			Pays::Yes,
 		)]
