@@ -103,4 +103,43 @@ fn remove_claim_work(){
 
 
 
+//teset cases for change_claim
+#[test]  
+fn change_claim_failed_when_proof_not_exist(){
+	new_test_ext().execute_with(||{
+		let claim = vec![0,1,2,3];
+		assert_noop!(
+			PoeModule::change_claim(Origin::signed(1),claim.clone(),2),
+			Error::<Test>::ProofNotExist
+			);
+	})
+}
 
+
+#[test]
+fn change_claim_failed_when_not_have_permission(){
+	new_test_ext().execute_with(||{
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone());
+
+		assert_noop!(
+			PoeModule::change_claim(Origin::signed(2),claim.clone(),1),
+			Error::<Test>::NotHavePermission
+			);
+	})
+}
+
+#[test]
+fn change_claim_work(){
+	new_test_ext().execute_with(||{
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone());
+
+		assert_ok!(PoeModule::change_claim(Origin::signed(1),claim.clone(),2));
+
+		assert_eq!(Proofs::<Test>::get(&claim),(2,system::Module::<Test>::block_number()));
+
+	})
+}
