@@ -259,8 +259,8 @@ impl template::Trait for Runtime {
 
 
 parameter_types! {
-	pub const MinClaimLength: u32 = 3;
-	pub const MaxClaimLength: u32 = 128;
+	pub const MinClaimLength: u32 = 2;
+	pub const MaxClaimLength: u32 = 6;
 }
 
 
