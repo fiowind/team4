@@ -92,7 +92,7 @@ fn remove_claim_work(){
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone());
 
 
-		assert_ok!(PoeModule::create_claim(Origin::signed(1),claim.clone()));
+		assert_ok!(PoeModule::remove_claim(Origin::signed(1),claim.clone()));
 
 
 		assert_eq!(Proofs::<Test>::get(&claim),(1,system::Module::<Test>::block_number()));
