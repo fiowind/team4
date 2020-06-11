@@ -33,7 +33,7 @@ fn create_claim_failed_when_claim_too_long(){
 
 
 #[test]
-fn create_claim_work(){
+fn create_claim_works(){
 	new_test_ext().execute_with(||{
 		let claim = vec![0,1,2,3];
 		assert_ok!(PoeModule::create_claim(Origin::signed(1),claim.clone()));
@@ -85,7 +85,7 @@ fn remove_claim_failed_when_not_have_permission(){
 }
 
 #[test]
-fn remove_claim_work(){
+fn remove_claim_works(){
 	new_test_ext().execute_with(||{
 		let claim = vec![0,1,2,3];
 
@@ -131,7 +131,7 @@ fn change_claim_failed_when_not_have_permission(){
 }
 
 #[test]
-fn change_claim_work(){
+fn change_claim_works(){
 	new_test_ext().execute_with(||{
 		let claim = vec![0,1,2,3];
 

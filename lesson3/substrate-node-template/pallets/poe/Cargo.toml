@@ -56,6 +56,12 @@ git = 'https://github.com/paritytech/substrate.git'
 tag = 'v2.0.0-rc2'
 version = '2.0.0-rc2'
 
+[dependencies.balances]
+package = 'pallet-balances'
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+tag = 'v2.0.0-rc2'
+version = '2.0.0-rc2'
 
 
 
@@ -65,4 +71,5 @@ std = [
     'codec/std',
     'frame-support/std',
     'frame-system/std',
+    'balances/std',
 ]

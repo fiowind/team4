@@ -269,6 +269,7 @@ impl poe::Trait for Runtime {
 	type Event = Event;
 	type MinClaimLength = MinClaimLength;
 	type MaxClaimLength = MaxClaimLength;
+	type Currency = balances::Module<Runtime>;
 }
 
 
