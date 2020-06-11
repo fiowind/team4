@@ -21,9 +21,9 @@ use sp_runtime::traits::StaticLookup;
 // use pallet_balances::traits::Balance;
 
 
-// type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as frame_system::Trait>::AccountId>>::Balance;
+type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as frame_system::Trait>::AccountId>>::Balance;
 
-type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
+// type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
 
 
 
@@ -40,7 +40,7 @@ pub trait Trait: system::Trait {
 	/// The overarching event type.
 	type Event: From<Event<Self>> + Into<<Self as system::Trait>::Event>;
 
-	// type Currency: Currency<Self::AccountId>;
+	type Currency: Currency<Self::AccountId>;
 
 	type MinClaimLength : Get<u32>;
 

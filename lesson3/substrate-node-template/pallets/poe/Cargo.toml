@@ -71,5 +71,5 @@ std = [
     'codec/std',
     'frame-support/std',
     'frame-system/std',
-    'pallet-balances/std',
+    'balances/std',
 ]
