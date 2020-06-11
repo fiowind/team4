@@ -102,8 +102,6 @@ decl_module! {
 
 			ensure!(claim.len() as u32 >= T::MinClaimLength::get(),Error::<T>::CliamTooShort );
 
-			// println!("{:?}",T::MaxClaimLength::get() );
-
 			ensure!(claim.len() as u32 <= T::MaxClaimLength::get(),Error::<T>::CliamTooLong );
 
 

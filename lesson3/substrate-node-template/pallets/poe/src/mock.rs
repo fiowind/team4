@@ -51,7 +51,7 @@ impl system::Trait for Test {
 
 parameter_types! {
 	pub const MinClaimLength: u32 = 3;
-	pub const MaxClaimLength: u32 = 128;
+	pub const MaxClaimLength: u32 = 6;
 }
 
 
