@@ -18,9 +18,12 @@ use frame_system::{self as system,ensure_signed};
 
 use sp_std::prelude::*;
 use sp_runtime::traits::StaticLookup;
+// use pallet_balances::traits::Balance;
 
 
-type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as frame_system::Trait>::AccountId>>::Balance;
+// type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as frame_system::Trait>::AccountId>>::Balance;
+
+type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
 
 
 
@@ -37,7 +40,7 @@ pub trait Trait: system::Trait {
 	/// The overarching event type.
 	type Event: From<Event<Self>> + Into<<Self as system::Trait>::Event>;
 
-	type Currency: Currency<Self::AccountId>;
+	// type Currency: Currency<Self::AccountId>;
 
 	type MinClaimLength : Get<u32>;
 
@@ -254,7 +257,7 @@ decl_module! {
 
 		///  购买存证
 		#[weight = FunctionOf(
-			|(claim, _): (&Vec<u8>, &BalanceOf<T>)| (claim.len() * 10  + 10_000) as Weight,
+			|(claim, price): (&Vec<u8>, &BalanceOf<T>)| (claim.len() * 10 + price / 100  + 10_000) as Weight,
 			DispatchClass::Normal,
 			Pays::Yes,
 		)]
