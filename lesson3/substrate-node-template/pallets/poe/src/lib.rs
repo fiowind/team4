@@ -10,9 +10,11 @@
 /// https://github.com/paritytech/substrate/blob/master/frame/example/src/lib.rs
 
 
+use frame_support::traits::Get;
 use frame_support::{decl_module, decl_storage, decl_event, decl_error,dispatch,ensure};
 use frame_system::{self as system,ensure_signed};
 use sp_std::prelude::*;
+use sp_runtime::traits::StaticLookup;
 
 #[cfg(test)]
 mod mock;
@@ -26,6 +28,11 @@ pub trait Trait: system::Trait {
 
 	/// The overarching event type.
 	type Event: From<Event<Self>> + Into<<Self as system::Trait>::Event>;
+
+	type MinClaimLength : Get<u32>;
+
+
+	type MaxClaimLength : Get<u32>;
 }
 
 // This pallet's storage items.
@@ -66,8 +73,8 @@ decl_error! {
 		ProofAlreadyExist,
 		ProofNotExist,
 		NotHavePermission,
-		CliamLenMin4Char,
-		CliamLenMax64Char,
+		CliamTooShort,
+		CliamTooLong,
 	}
 }
 
@@ -91,11 +98,11 @@ decl_module! {
 		#[weight = 10_000]
 		pub fn create_claim(origin, claim: Vec<u8>) -> dispatch::DispatchResult {
 
-			const MIN_LEN: usize = 4;
-			const MAX_LEN: usize = 64;
 
-			ensure!(claim.len() >= MIN_LEN,Error::<T>::CliamLenMin4Char );
-			ensure!(claim.len() <= MAX_LEN,Error::<T>::CliamLenMax64Char );
+
+			ensure!(claim.len() as u32 >= T::MinClaimLength::get(),Error::<T>::CliamTooShort );
+
+			ensure!(claim.len() as u32 <= T::MaxClaimLength::get(),Error::<T>::CliamTooLong );
 
 
 			// Check it was signed and get the signer. See also: ensure_root and ensure_none
@@ -154,7 +161,7 @@ decl_module! {
 
 		///  转让存证
 		#[weight = 10_000]
-		pub fn change_claim(origin, claim: Vec<u8>,receiver: T::AccountId) -> dispatch::DispatchResult {
+		pub fn change_claim(origin, claim: Vec<u8>,receiver: <T::Lookup as StaticLookup>::Source) -> dispatch::DispatchResult {
 			// Check it was signed and get the signer. See also: ensure_root and ensure_none
 
 			//确认用户签名
@@ -170,6 +177,10 @@ decl_module! {
 
 			//检查存证所有人与交易提交人是否一致
 			ensure!(owner == who, Error::<T>::NotHavePermission);
+
+
+			//查找接收人AccountId
+			let receiver = T::Lookup::lookup(receiver)?;
 
 
 			//修改存证所有人

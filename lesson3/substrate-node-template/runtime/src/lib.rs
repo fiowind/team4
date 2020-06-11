@@ -257,9 +257,18 @@ impl template::Trait for Runtime {
 	type Event = Event;
 }
 
+
+parameter_types! {
+	pub const MinClaimLength: u32 = 3;
+	pub const MaxClaimLength: u32 = 128;
+}
+
+
+
 impl poe::Trait for Runtime {
 	type Event = Event;
-	// type AccountStore = System;
+	type MinClaimLength = MinClaimLength;
+	type MaxClaimLength = MaxClaimLength;
 }
 
 
