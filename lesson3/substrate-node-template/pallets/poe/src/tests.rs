@@ -95,7 +95,7 @@ fn remove_claim_work(){
 		assert_ok!(PoeModule::remove_claim(Origin::signed(1),claim.clone()));
 
 
-		assert_eq!(Proofs::<Test>::get(&claim),(0,0));
+		assert_ne!(Proofs::<Test>::get(&claim),(0,0),"Testing that a and b are not equal");
 
 
 	})
