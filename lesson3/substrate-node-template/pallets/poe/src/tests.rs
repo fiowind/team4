@@ -160,3 +160,35 @@ fn buy_claim_failed_when_your_own_proofs(){
 			);
 	})
 }
+
+
+#[test]  
+fn buy_claim_failed_when_price_too_low(){
+	new_test_ext().execute_with(||{
+
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),2);
+
+		assert_noop!(
+			PoeModule::buy_claim(Origin::signed(2),claim.clone(),1),
+			Error::<Test>::PriceTooLow
+			);
+	})
+}
+
+
+#[test]  
+fn buy_claim_works(){
+	new_test_ext().execute_with(||{
+
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
+
+		assert_ok!(PoeModule::buy_claim(Origin::signed(2),claim.clone(),2));
+
+		assert_eq!(Proofs::<Test>::get(&claim),(2,system::Module::<Test>::block_number(),2));
+
+	})
+}
