@@ -64,6 +64,14 @@ function Main (props) {
             onChange={ (e) => handleFileChosen(e.target.files[0]) }
           />
         </Form.Field>
+        <Form.Field>
+          <Input
+            label='Price'
+            id='price'
+            type='text'
+            value={price}
+          />
+        </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
           <TxButton
             accountPair={accountPair}
@@ -73,7 +81,7 @@ function Main (props) {
             attrs={{
               palletRpc: 'poeModule',
               callable: 'createClaim',
-              inputParams: [digest],
+              inputParams: [digest,price.toNumber()],
               paramFields: [true]
             }}
           />
