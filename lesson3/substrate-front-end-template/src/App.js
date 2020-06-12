@@ -60,14 +60,11 @@ function Main () {
           </Grid.Row>
           <Grid.Row>
             <Transfer accountPair={accountPair} />
-            <Upgrade accountPair={accountPair} />
-          </Grid.Row>
-          <Grid.Row>
             <Interactor accountPair={accountPair} />
-            <Events />
           </Grid.Row>
           <Grid.Row>
             <PoeModule accountPair={accountPair} />
+            <Events />
           </Grid.Row>
         </Grid>
         <DeveloperConsole />

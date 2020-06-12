@@ -246,7 +246,7 @@ function Main (props) {
 
   return (
     <Grid.Column width={8}>
-      <h1>Poe Module</h1>
+      <h1>存证模块</h1>
       <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
         <table class="ui very padded table">
           <tbody>

@@ -57,7 +57,7 @@ function Main (props) {
         icon='erase'
         onClick={ _ => setEventFeed([]) }
       />
-      <Feed style={{ clear: 'both', overflow: 'auto', maxHeight: 250 }} events={eventFeed} />
+      <Feed style={{ clear: 'both', overflow: 'auto', maxHeight: 600 }} events={eventFeed} />
     </Grid.Column>
   );
 }
