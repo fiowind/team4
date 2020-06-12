@@ -145,6 +145,40 @@ fn transfer_claim_works(){
 }
 
 
+//teset cases for update_claim_price
+#[test]  
+fn update_claim_price_failed_when_your_own_proofs(){
+	ExtBuilder::build().execute_with(||{
+
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
+
+		assert_noop!(
+			PoeModule::update_claim_price(Origin::signed(1),claim.clone(),1),
+			Error::<Test>::ProofPriceIsSame
+			);
+	})
+}
+
+
+#[test]  
+fn update_claim_price_works(){
+	ExtBuilder::build().execute_with(||{
+
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
+
+		assert_ok!(PoeModule::update_claim_price(Origin::signed(1),claim.clone(),2));
+
+		assert_eq!(Proofs::<Test>::get(&claim),(1,system::Module::<Test>::block_number(),2));
+
+	})
+}
+
+
+
 //teset cases for buy_claim
 #[test]  
 fn buy_claim_failed_when_your_own_proofs(){
