@@ -70,7 +70,7 @@ function Main (props) {
             id='price'
             type='text'
             value={price}
-            onChange={ (e) => setPrice(e.target.value.toNumber()) }
+            onChange={ (e) => setPrice(e.target.value) }
           />
         </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
