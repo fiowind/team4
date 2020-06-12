@@ -70,7 +70,7 @@ function Main (props) {
             id='price'
             type='text'
             value={price}
-            onChange={ (e) => setPrice(e.toNumber()) }
+            onChange={ (e) => setPrice(e.target.value.toNumber()) }
           />
         </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
@@ -82,7 +82,7 @@ function Main (props) {
             attrs={{
               palletRpc: 'poeModule',
               callable: 'createClaim',
-              inputParams: [digest,price],
+              inputParams: [digest, price],
               paramFields: [true]
             }}
           />
