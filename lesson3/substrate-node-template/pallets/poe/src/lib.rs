@@ -242,8 +242,7 @@ decl_module! {
 
 
 			//修改存证所有人
-			Proofs::<T>::mutate(&claim, |(owner,_,price)| (owner.clone(), system::Module::<T>::block_number(),price.clone()));
-
+			Proofs::<T>::insert(&claim,(owner.clone(), system::Module::<T>::block_number(),price.clone()));
 
 			//触发通知事件
 			Self::deposit_event(RawEvent::ClaimPriceUpdated(who,claim,old_price,price));
@@ -285,7 +284,7 @@ decl_module! {
 
 
 			//修改存证所有人
-			Proofs::<T>::mutate(&claim, |(_,_,price)| (who.clone(), system::Module::<T>::block_number(),price.clone()));
+			Proofs::<T>::insert(&claim,(who.clone(), system::Module::<T>::block_number(),price.clone()));
 
 
 			//触发通知事件
