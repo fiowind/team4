@@ -42,15 +42,15 @@ function Main (props) {
   }, [digest, api.query.poeModule]);
 
   const handleFileChosen = (file) => {
-    let fileReader = new FileReader();
+    const fileReader = new FileReader();
     const bufferToDigest = () => {
       const content = Array.from(new Uint8Array(fileReader.result)).map((b) => b.toString(16).padStart(2, '0')).join('');
       const hash = blake2AsHex(content, 256);
       setDigest(hash);
-    }
+    };
     fileReader.onloadend = bufferToDigest;
     fileReader.readAsArrayBuffer(file);
-  }
+  };
 
   return (
     <Grid.Column width={8}>
