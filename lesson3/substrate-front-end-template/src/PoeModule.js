@@ -93,6 +93,7 @@ function Main (props) {
           />
         </Form.Field>
         <div style={{ overflowWrap: 'break-word' }}>{status}</div>
+        <div style={{ overflowWrap: 'break-word' }}>{`Claim info, owner: ${owner}, block_num: ${blockNum}, price: ${price} `}</div>
       </Form>
     </Grid.Column>
   );
@@ -100,6 +101,6 @@ function Main (props) {
 
 export default function PoeModule (props) {
   const { api } = useSubstrate();
-  return (api.query.poeModule && api.query.poeModule.Proofs
+  return (api.query.poeModule && api.query.poeModule.proofs
     ? <Main {...props} /> : null);
 }
