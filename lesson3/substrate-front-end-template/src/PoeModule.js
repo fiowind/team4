@@ -16,6 +16,7 @@ function Main (props) {
   const [owner, setOwner] = useState('');
   const [blockNum, setblockNum] = useState(0);
   const [price, setPrice] = useState(0);
+  const [receiver, setReceiver] = useState('');
 
   // The currently stored value
   // const [currentValue, setCurrentValue] = useState(0);
@@ -97,6 +98,15 @@ function Main (props) {
     {
       menuItem: '删除存证',
       render: () => <Tab.Pane attached={false}><Form>
+        <Form.Field>
+          <Input
+            label='claim'
+            id='claim'
+            type='text'
+            value={digest}
+            onChange={ (e) =>  setDigest(e.target.value) }
+          />
+        </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
           <TxButton
             accountPair={accountPair}
@@ -116,11 +126,120 @@ function Main (props) {
     },
     {
       menuItem: '转让存证',
-      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+      render: () => <Tab.Pane attached={false}>
+        <Form>
+        <Form.Field>
+          <Input
+            label='claim'
+            id='claim'
+            type='text'
+            value={digest}
+            onChange={ (e) =>  setDigest(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field>
+          <Input
+            label='receiver'
+            id='receiver'
+            type='text'
+            value={receiver}
+            onChange={ (e) =>  setReceiver(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field style={{ textAlign: 'center' }}>
+          <TxButton
+            accountPair={accountPair}
+            label='Transfer Claim'
+            type='SIGNED-TX'
+            setStatus={setStatus}
+            attrs={{
+              palletRpc: 'poeModule',
+              callable: 'transferClaim',
+              inputParams: [digest,receiver],
+              paramFields: [true]
+            }}
+          />
+        </Form.Field>
+        </Form>
+      </Tab.Pane>,
+    },
+    {
+      menuItem: '修改价格',
+      render: () => <Tab.Pane attached={false}>
+        <Form>
+        <Form.Field>
+          <Input
+            label='claim'
+            id='claim'
+            type='text'
+            value={digest}
+            onChange={ (e) =>  setDigest(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field>
+          <Input
+            label='Price'
+            id='price'
+            type='text'
+            value={price}
+            onChange={ (e) => setPrice(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field style={{ textAlign: 'center' }}>
+          <TxButton
+            accountPair={accountPair}
+            label='Update Claim'
+            type='SIGNED-TX'
+            setStatus={setStatus}
+            attrs={{
+              palletRpc: 'poeModule',
+              callable: 'updateClaimPrice',
+              inputParams: [digest,price],
+              paramFields: [true]
+            }}
+          />
+        </Form.Field>
+        </Form>
+      </Tab.Pane>,
     },
     {
       menuItem: '购买存证',
-      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+      render: () => <Tab.Pane attached={false}>
+        <Form>
+        <Form.Field>
+          <Input
+            label='claim'
+            id='claim'
+            type='text'
+            value={digest}
+            onChange={ (e) =>  setDigest(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field>
+          <Input
+            label='Price'
+            id='price'
+            type='text'
+            value={price}
+            onChange={ (e) => setPrice(e.target.value) }
+          />
+        </Form.Field>
+        <Form.Field style={{ textAlign: 'center' }}>
+          <TxButton
+            accountPair={accountPair}
+            label='Buy Claim'
+            type='SIGNED-TX'
+            setStatus={setStatus}
+            attrs={{
+              palletRpc: 'poeModule',
+              callable: 'buyClaim',
+              inputParams: [digest,price],
+              paramFields: [true]
+            }}
+          />
+        </Form.Field>
+        </Form>
+      </Tab.Pane>,
     },
   ]
 

@@ -67,9 +67,6 @@ function Main () {
             <Events />
           </Grid.Row>
           <Grid.Row>
-            <TemplateModule accountPair={accountPair} />
-          </Grid.Row>
-          <Grid.Row>
             <PoeModule accountPair={accountPair} />
           </Grid.Row>
         </Grid>
