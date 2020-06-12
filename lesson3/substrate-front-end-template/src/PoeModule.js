@@ -57,7 +57,7 @@ function Main (props) {
   const panes = [
     {
       menuItem: '创建存证',
-      render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
+      render: () => return(<Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>)
     },
     {
       menuItem: '删除存证',
