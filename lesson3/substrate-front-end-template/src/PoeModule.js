@@ -57,7 +57,7 @@ function Main (props) {
   const panes = [
     {
       menuItem: '创建存证',
-      render: () => <Tab.Pane attached={false}>
+      render: () => <Tab.Pane attached={false}><Form>
         <Form.Field>
           <Input
             label='Your File'
@@ -91,14 +91,13 @@ function Main (props) {
             }}
           />
         </Form.Field>
+        </Form>
       </Tab.Pane>
     },
     {
       menuItem: '删除存证',
-      render: () => <Tab.Pane attached={false}>
-
+      render: () => <Tab.Pane attached={false}><Form>
         <Form.Field style={{ textAlign: 'center' }}>
-
           <TxButton
             accountPair={accountPair}
             label='Remove Claim'
@@ -112,7 +111,7 @@ function Main (props) {
             }}
           />
         </Form.Field>
-
+        </Form>
       </Tab.Pane>,
     },
     {
