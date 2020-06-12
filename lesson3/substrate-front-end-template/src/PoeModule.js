@@ -90,6 +90,7 @@ function Main (props) {
               paramFields: [true]
             }}
           />
+        </Form.Field>
       </Tab.Pane>
     },
     {
