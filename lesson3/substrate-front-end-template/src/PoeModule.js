@@ -57,30 +57,7 @@ function Main (props) {
   const panes = [
     {
       menuItem: '创建存证',
-      render: () => return(<Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>)
-    },
-    {
-      menuItem: '删除存证',
-      render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
-    },
-    {
-      menuItem: '转让存证',
-      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-    },
-    {
-      menuItem: '购买存证',
-      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
-    },
-  ]
-
-
-  return (
-    <Grid.Column width={8}>
-      <h1>Poe Module</h1>
-      <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
-
-
-      <Form>
+      render: () => <Tab.Pane attached={false}>
         <Form.Field>
           <Input
             label='Your File'
@@ -113,6 +90,13 @@ function Main (props) {
               paramFields: [true]
             }}
           />
+      </Tab.Pane>
+    },
+    {
+      menuItem: '删除存证',
+      render: () => <Tab.Pane attached={false}>
+
+        <Form.Field style={{ textAlign: 'center' }}>
 
           <TxButton
             accountPair={accountPair}
@@ -128,6 +112,23 @@ function Main (props) {
           />
         </Form.Field>
 
+      </Tab.Pane>,
+    },
+    {
+      menuItem: '转让存证',
+      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    },
+    {
+      menuItem: '购买存证',
+      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    },
+  ]
+
+
+  return (
+    <Grid.Column width={8}>
+      <h1>Poe Module</h1>
+      <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
         <table class="ui very padded table">
           <tbody>
             <tr>
@@ -155,9 +156,6 @@ function Main (props) {
         </table>
 
 
-
-
-      </Form>
     </Grid.Column>
   );
 }
