@@ -61,7 +61,7 @@ function Main (props) {
             label='Your File'
             id='file'
             type='file'
-            onChange={ (e) => handleFileChosen(e.target.files(0)) }
+            onChange={ (e) => handleFileChosen(e.target.files[0]) }
           />
         </Form.Field>
         <Form.Field style={{ textAlign: 'center' }}>
