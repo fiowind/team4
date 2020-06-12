@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input, Grid} from 'semantic-ui-react';
+import { Form, Input, Grid } from 'semantic-ui-react';
 
 import { useSubstrate } from './substrate-lib';
 import { TxButton } from './substrate-lib/components';
@@ -12,7 +12,7 @@ function Main (props) {
   // The transaction submission status
   const [status, setStatus] = useState('');
   const [digest, setDigest] = useState('');
-  const [owner,  setOwner]  = useState('');
+  const [owner, setOwner] = useState('');
   const [blockNum, setblockNum] = useState(0);
   const [price, setPrice] = useState(0);
 
@@ -22,7 +22,7 @@ function Main (props) {
 
   useEffect(() => {
     let unsubscribe;
-    api.query.poeModule.proofs(digest,(result) => {
+    api.query.poeModule.proofs(digest, (result) => {
       // The storage value is an Option<u32>
       // So we have to check whether it is None first
       // There is also unwrapOr
@@ -35,7 +35,6 @@ function Main (props) {
       setOwner(result[0].toString());
       setblockNum(result[1].toNumber());
       setPrice(result[2].toNumber());
-
 
     }).then(unsub => {
       unsubscribe = unsub;
