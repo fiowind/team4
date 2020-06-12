@@ -26,12 +26,11 @@ type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as frame_system::Trai
 // type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
 
 
+#[cfg(test)]
+mod mock;
 
-// #[cfg(test)]
-// mod mock;
-
-// #[cfg(test)]
-// mod tests;
+#[cfg(test)]
+mod tests;
 
 /// The pallet's configuration trait.
 pub trait Trait: system::Trait {

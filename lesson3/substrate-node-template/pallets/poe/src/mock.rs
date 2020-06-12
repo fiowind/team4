@@ -3,6 +3,8 @@
 use crate::{Module, Trait};
 use sp_core::H256;
 use frame_support::{impl_outer_origin, parameter_types, weights::Weight};
+
+
 use sp_runtime::{
 	traits::{BlakeTwo256, IdentityLookup}, testing::Header, Perbill,
 };
@@ -44,7 +46,7 @@ impl system::Trait for Test {
 	type AvailableBlockRatio = AvailableBlockRatio;
 	type Version = ();
 	type ModuleToIndex = ();
-	type AccountData = ();
+	type AccountData = balances::AccountData<u64>;
 	type OnNewAccount = ();
 	type OnKilledAccount = ();
 }
@@ -52,6 +54,16 @@ impl system::Trait for Test {
 parameter_types! {
 	pub const MinClaimLength: u32 = 3;
 	pub const MaxClaimLength: u32 = 6;
+	pub const ExistentialDeposit: u64 = 1;
+}
+
+
+impl balances::Trait for Test {
+	type Balance = u64;
+	type DustRemoval = ();
+	type Event = ();
+	type ExistentialDeposit = ExistentialDeposit;
+	type AccountStore = System;
 }
 
 
@@ -59,8 +71,11 @@ impl Trait for Test {
 	type Event = ();
 	type MinClaimLength = MinClaimLength;
 	type MaxClaimLength = MaxClaimLength;
+	type Currency = Balances;
 }
 pub type PoeModule = Module<Test>;
+pub type System = system::Module<Test>;
+pub type Balances = balances::Module<Test>;
 
 // This function basically just builds a genesis storage key/value store according to
 // our desired mockup.
