@@ -1,5 +1,6 @@
 // Creating mock runtime here
 
+use sp_io::TestExternalities;
 use crate::{Module, Trait};
 use sp_core::H256;
 use frame_support::{impl_outer_origin, parameter_types, weights::Weight};
@@ -79,6 +80,26 @@ pub type Balances = balances::Module<Test>;
 
 // This function basically just builds a genesis storage key/value store according to
 // our desired mockup.
-pub fn new_test_ext() -> sp_io::TestExternalities {
-	system::GenesisConfig::default().build_storage::<Test>().unwrap().into()
+// pub fn new_test_ext() -> sp_io::TestExternalities {
+// 	system::GenesisConfig::default().build_storage::<Test>().unwrap().into()
+// }
+
+
+pub struct ExtBuilder;
+
+impl ExtBuilder {
+	pub fn build() -> TestExternalities {
+		let mut storage = system::GenesisConfig::default()
+			.build_storage::<Test>()
+			.unwrap();
+
+		balances::GenesisConfig::<Test> {
+			balances: vec![(1, 1000), (2, 1000), (3, 1000), (4, 1000)],
+		}
+		.assimilate_storage(&mut storage).unwrap();
+
+		let mut ext = TestExternalities::from(storage);
+		ext.execute_with(|| System::set_block_number(1));
+		ext
+	}
 }

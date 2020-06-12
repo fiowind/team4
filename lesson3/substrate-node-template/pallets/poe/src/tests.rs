@@ -10,7 +10,7 @@ use frame_support::{assert_ok,assert_noop};
 //teset cases for create_claim
 #[test]
 fn create_claim_failed_when_claim_too_short(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![1];
 		assert_noop!(
 			PoeModule::create_claim(Origin::signed(1),claim.clone(),1),
@@ -22,7 +22,7 @@ fn create_claim_failed_when_claim_too_short(){
 
 #[test]
 fn create_claim_failed_when_claim_too_long(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3,4,5,6,7,8,9];
 		assert_noop!(
 			PoeModule::create_claim(Origin::signed(1),claim.clone(),1),
@@ -34,7 +34,7 @@ fn create_claim_failed_when_claim_too_long(){
 
 #[test]
 fn create_claim_works(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 		assert_ok!(PoeModule::create_claim(Origin::signed(1),claim.clone(),1));
 		assert_eq!(Proofs::<Test>::get(&claim),(1,system::Module::<Test>::block_number(),1));
@@ -44,7 +44,7 @@ fn create_claim_works(){
 
 #[test]  
 fn create_claim_failed_when_proof_already_exist(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
@@ -60,7 +60,7 @@ fn create_claim_failed_when_proof_already_exist(){
 //teset cases for remove_claim
 #[test]  
 fn remove_claim_failed_when_proof_not_exist(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 		assert_noop!(
 			PoeModule::remove_claim(Origin::signed(1),claim.clone()),
@@ -72,7 +72,7 @@ fn remove_claim_failed_when_proof_not_exist(){
 
 #[test]
 fn remove_claim_failed_when_not_have_permission(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
@@ -86,7 +86,7 @@ fn remove_claim_failed_when_not_have_permission(){
 
 #[test]
 fn remove_claim_works(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
@@ -106,7 +106,7 @@ fn remove_claim_works(){
 //teset cases for transfer_claim
 #[test]  
 fn transfer_claim_failed_when_proof_not_exist(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 		assert_noop!(
 			PoeModule::transfer_claim(Origin::signed(1),claim.clone(),2),
@@ -118,7 +118,7 @@ fn transfer_claim_failed_when_proof_not_exist(){
 
 #[test]
 fn transfer_claim_failed_when_not_have_permission(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
@@ -132,7 +132,7 @@ fn transfer_claim_failed_when_not_have_permission(){
 
 #[test]
 fn transfer_claim_works(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 		let claim = vec![0,1,2,3];
 
 		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
@@ -148,7 +148,7 @@ fn transfer_claim_works(){
 //teset cases for buy_claim
 #[test]  
 fn buy_claim_failed_when_your_own_proofs(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 
 		let claim = vec![0,1,2,3];
 
@@ -164,7 +164,7 @@ fn buy_claim_failed_when_your_own_proofs(){
 
 #[test]  
 fn buy_claim_failed_when_price_too_low(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 
 		let claim = vec![0,1,2,3];
 
@@ -180,7 +180,7 @@ fn buy_claim_failed_when_price_too_low(){
 
 #[test]  
 fn buy_claim_works(){
-	new_test_ext().execute_with(||{
+	ExtBuilder::build().execute_with(||{
 
 		let claim = vec![0,1,2,3];
 
