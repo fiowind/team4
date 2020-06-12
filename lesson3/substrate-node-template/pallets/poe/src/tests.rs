@@ -143,3 +143,20 @@ fn transfer_claim_works(){
 
 	})
 }
+
+
+//teset cases for buy_claim
+#[test]  
+fn buy_claim_failed_when_your_own_proofs(){
+	new_test_ext().execute_with(||{
+
+		let claim = vec![0,1,2,3];
+
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
+
+		assert_noop!(
+			PoeModule::buy_claim(Origin::signed(1),claim.clone(),1),
+			Error::<Test>::YourOwnProofs
+			);
+	})
+}
