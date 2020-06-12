@@ -224,7 +224,7 @@ fn buy_claim_works(){
 
 		assert_eq!(Proofs::<Test>::get(&claim),(2,system::Module::<Test>::block_number(),110));
 
-		assert_eq!(Balances::total_balance(&1), 1110);
+		assert_eq!(Balances::total_balance(&1), 1000);
 
 		assert_eq!(Balances::total_balance(&2), 890);
 
