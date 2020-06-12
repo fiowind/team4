@@ -3,6 +3,7 @@
   "DEVELOPMENT_KEYRING": true,
   "CUSTOM_TYPES": {
     "Address": "AccountId",
-    "LookupSource": "AccountId"
+    "LookupSource": "AccountId",
+    "Price": "Balance"
   }
 }
