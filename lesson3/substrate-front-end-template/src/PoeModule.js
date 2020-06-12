@@ -101,8 +101,33 @@ function Main (props) {
             }}
           />
         </Form.Field>
-        <div style={{ overflowWrap: 'break-word' }}>{status}</div>
-        <div style={{ overflowWrap: 'break-word' }}>{`Claim info, owner: ${owner}, block_num: ${blockNum}, price: ${price} `}</div>
+
+        <table class="ui very padded table">
+          <tbody>
+            <tr>
+              <td>status</td>
+              <td>{status}</td>
+            </tr>
+            <tr>
+              <td>claim</td>
+              <td>{digest}</td>
+            </tr>
+            <tr>
+              <td>owner</td>
+              <td>{owner}</td>
+            </tr>
+            <tr>
+              <td>blockNum</td>
+              <td>{blockNum}</td>
+            </tr>
+            <tr>
+              <td>price</td>
+              <td>{price} Uint</td>
+            </tr>
+          
+          </tbody>
+        </table>
+
       </Form>
     </Grid.Column>
   );
