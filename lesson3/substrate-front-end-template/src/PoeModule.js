@@ -31,15 +31,12 @@ function Main (props) {
       // } else {
       //   setCurrentValue(newValue.unwrap().toNumber());
       // }
-
       setOwner(result[0].toString());
       setblockNum(result[1].toNumber());
       setPrice(result[2].toNumber());
-
     }).then(unsub => {
       unsubscribe = unsub;
-    })
-      .catch(console.error);
+    }).catch(console.error);
 
     return () => unsubscribe && unsubscribe();
   }, [digest,api.query.poeModule]);
