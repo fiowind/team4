@@ -4,6 +4,6 @@
   "CUSTOM_TYPES": {
     "Address": "AccountId",
     "LookupSource": "AccountId",
-    "Price": "Balance"
+    "Price": "Currency"
   }
 }
