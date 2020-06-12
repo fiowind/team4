@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Input, Grid } from 'semantic-ui-react';
 
-import ReactDom from 'react-dom'
-import Header from '../../compent/header'
-
-
 import { useSubstrate } from './substrate-lib';
 import { TxButton } from './substrate-lib/components';
 import { blake2AsHex } from '@polkadot/util-crypto';
