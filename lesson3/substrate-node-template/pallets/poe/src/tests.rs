@@ -218,11 +218,15 @@ fn buy_claim_works(){
 
 		let claim = vec![0,1,2,3];
 
-		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),1);
+		let _ = PoeModule::create_claim(Origin::signed(1),claim.clone(),100);
 
-		assert_ok!(PoeModule::buy_claim(Origin::signed(2),claim.clone(),2));
+		assert_ok!(PoeModule::buy_claim(Origin::signed(2),claim.clone(),110));
 
-		assert_eq!(Proofs::<Test>::get(&claim),(2,system::Module::<Test>::block_number(),2));
+		assert_eq!(Proofs::<Test>::get(&claim),(2,system::Module::<Test>::block_number(),110));
+
+		assert_eq!(Balances::total_balance(&1), 1110);
+
+		assert_eq!(Balances::total_balance(&2), 890);
 
 	})
 }
