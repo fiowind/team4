@@ -81,7 +81,7 @@ function Main (props) {
             attrs={{
               palletRpc: 'poeModule',
               callable: 'createClaim',
-              inputParams: [digest,price.toNumber()],
+              inputParams: [digest,price],
               paramFields: [true]
             }}
           />
