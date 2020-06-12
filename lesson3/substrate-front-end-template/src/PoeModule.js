@@ -39,24 +39,16 @@ function Main (props) {
     }).catch(console.error);
 
     return () => unsubscribe && unsubscribe();
-  }, [digest,api.query.poeModule]);
-
+  },[digest,api.query.poeModule]);
 
   const handleFileChosen = (file) => {
-
     let fileReader = new fileReader();
-
     const bufferToDigest = () => {
-
       content = Array.from(new Uint8Array(fileReader.result)).map((b) => b.toString(16).padStart(2,'0')).join('');
-
       const hash = blake2AsHex(content,256);
-
       setDigest(hash);
-
     }
-
-
+    
   }
 
 
