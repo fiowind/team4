@@ -93,7 +93,6 @@ function Main (props) {
           />
         </Form.Field>
         <div style={{ overflowWrap: 'break-word' }}>{status}</div>
-        <div style={{ overflowWrap: 'break-word' }}>{`Claim info, owner: ${owner}, block_num: ${blockNum}, price: ${price} `}</div>
       </Form>
     </Grid.Column>
   );
