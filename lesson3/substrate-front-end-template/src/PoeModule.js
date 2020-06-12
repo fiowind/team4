@@ -252,11 +252,11 @@ function Main (props) {
           <tbody>
             <tr>
               <td>status</td>
-              <td>{status}</td>
+              <td style="word-break: break-all;">{status}</td>
             </tr>
             <tr>
               <td>claim</td>
-              <td>{digest}</td>
+              <td style="word-break: break-all;">{digest}</td>
             </tr>
             <tr>
               <td>owner</td>
