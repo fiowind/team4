@@ -39,7 +39,7 @@ function Main (props) {
     }).catch(console.error);
 
     return () => unsubscribe && unsubscribe();
-  },[digest,api.query.poeModule]);
+  }, [digest, api.query.poeModule]);
 
   const handleFileChosen = (file) => {
     let fileReader = new fileReader();
@@ -48,7 +48,8 @@ function Main (props) {
       const hash = blake2AsHex(content,256);
       setDigest(hash);
     }
-    
+    fileReader.onloadend = bufferToDigest;
+    fileReader.readAsArrayBuffer(file);
   }
 
 
