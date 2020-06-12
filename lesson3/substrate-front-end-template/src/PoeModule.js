@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input, Grid } from 'semantic-ui-react';
+import { Form, Input, Grid, Tab } from 'semantic-ui-react';
 
 import { useSubstrate } from './substrate-lib';
 import { TxButton } from './substrate-lib/components';
@@ -53,9 +53,33 @@ function Main (props) {
     fileReader.readAsArrayBuffer(file);
   };
 
+
+  const panes = [
+    {
+      menuItem: '创建存证',
+      render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
+    },
+    {
+      menuItem: '删除存证',
+      render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+    },
+    {
+      menuItem: '转让存证',
+      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    },
+    {
+      menuItem: '购买存证',
+      render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+    },
+  ]
+
+
   return (
     <Grid.Column width={8}>
       <h1>Poe Module</h1>
+      <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+
+
       <Form>
         <Form.Field>
           <Input
@@ -65,7 +89,7 @@ function Main (props) {
             onChange={ (e) => handleFileChosen(e.target.files[0]) }
           />
         </Form.Field>
-        <Grid.Column width={4}>
+
         <Form.Field>
           <Input
             label='Price'
@@ -75,8 +99,7 @@ function Main (props) {
             onChange={ (e) => setPrice(e.target.value) }
           />
         </Form.Field>
-        </Grid.Column>
-        <Grid.Column width={4}>
+
         <Form.Field style={{ textAlign: 'center' }}>
           <TxButton
             accountPair={accountPair}
@@ -90,9 +113,7 @@ function Main (props) {
               paramFields: [true]
             }}
           />
-        </Form.Field>
-        </Grid.Column>
-        <Form.Field style={{ textAlign: 'center' }}>
+
           <TxButton
             accountPair={accountPair}
             label='Remove Claim'
@@ -106,8 +127,6 @@ function Main (props) {
             }}
           />
         </Form.Field>
-        <div style={{ overflowWrap: 'break-word' }}>{status}</div>
-        <div style={{ overflowWrap: 'break-word' }}>{`Claim info, owner: ${owner}, block_num: ${blockNum}, price: ${price} `}</div>
 
         <table class="ui very padded table">
           <tbody>
