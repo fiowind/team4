@@ -12,9 +12,11 @@ function Main (props) {
   // The transaction submission status
   const [status, setStatus] = useState('');
   const [digest, setDigest] = useState('');
-  const [owner, setOwner] = useState('none');
+  const [owner, setOwner] = useState('');
   const [blockNumber, setBlockNumber] = useState(0);
-  const [receiver, setReceiver] = useState('none');
+  const [receiver, setReceiver] = useState('');
+  const [amount, setAmount] = useState(0);
+
 
   useEffect(() => {
     let unsubscribe;
@@ -56,14 +58,27 @@ function Main (props) {
             label='Your File'
             onChange={ (e) => handleFileChosen(e.target.files[0]) }
           />
+          </Form.Field>
+          <Form.Field>
           <Input 
-              type='string'
-              id='receiver'
-              label='Claim Receiver'
-          
-              state='receiver'
-              onChange={ (_, { value }) => setReceiver(value) }
+            type='string'
+            id='receiver'
+            label='Claim Receiver'
+        
+            state='receiver'
+            onChange={ (_, { value }) => setReceiver(value) }
+          />
+          </Form.Field>
+          <Form.Field>
+          <Input
+            fluid
+            type='number'
+            id='amount'
+            label='Amount'
+            state='amount'
+            onChange={ (_, { value }) => setAmount(value) }
             />
+
         </Form.Field>
         <Form.Field>
           <TxButton
@@ -101,6 +116,31 @@ function Main (props) {
               inputParams: [digest, receiver],
               paramFields: [true]
             }} />
+
+            <TxButton
+              accountPair={accountPair}
+              label="Attach Claim Price"
+              setStatus={setStatus}
+              type="SIGNED-TX"
+              attrs={{
+                palletRpc: 'poeModule',
+                callable: 'attachClaimPrice',
+                inputParams: [digest, amount],
+                paramFields: [true]
+            }} />
+
+            <TxButton
+              accountPair={accountPair}
+              label="Purchase Claim"
+              setStatus={setStatus}
+              type="SIGNED-TX"
+              attrs={{
+                palletRpc: 'poeModule',
+                callable: 'purchaseClaim',
+                inputParams: [digest, amount],
+                paramFields: [true]
+            }} />
+
         </Form.Field>
 
         <div>{status}</div>

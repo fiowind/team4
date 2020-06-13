@@ -28,4 +28,23 @@
 
 * 用户A为自己的某个存证记录设置价格；
 * 用户B可以以一定的价格购买某个存证，当出价高于用户A设置的价格时，则以用户A设定的价格将费用从用户B转移到用户A，再将该存证进行转移。如果出价低于用户A的价格时，则不进行转移，返回错误。
+> 创建存证
+ >![star](./images/lesson3-q3-create-claim-ui.png)
 
+> 创建存证事件
+ >![star](./images/lesson3-q3-create-claim-event-ui.png)
+
+> 查询存证初始价格
+ >![star](./images/lesson3-q3-purchased-claim-price-query-ui.png)
+
+> 为存证设置价格
+ >![star](./images/lesson3-q3-attach-claim-price-ui.png)
+
+> 查询设置后的存证价格
+ >![star](./images/lesson3-q3-attached-claim-price-query-ui.png)
+
+> 购买存证
+ >![star](./images/lesson3-q3-purchased-claim-ui.png)
+
+> 查询购买后的存证
+ >![star](./images/lesson3-q3-purchased-claim-price-query-ui.png)
