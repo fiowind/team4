@@ -15,11 +15,25 @@
 * 撤销存证的测试用例；
 * 转移存证的测试用例；
 
+![task1.1] (./images/carge_test.png)
+
 第二题：编写存证模块的UI，包括
 
 * 创建存证的UI
 * 删除存证的UI
 * 转移存证的UI
+
+请注意 三个任务的执行顺序是：
+- Alice创建存证
+- Alice转移存证给Bob
+- Alice尝试删除存证，失败
+- Bob尝试删除存证，成功
+![task2.1] (./images/create_claim_confirmed_alice.png)
+![task2.2] (./images/remove_claim_failed_alice.png)
+![task2.2] (./images/remove_claim_ok_bob.png)
+![task2.3] (./images/transfer_claim_alice.png)
+![task2.3] (./images/transfer_claim_confirmed_bob.png)
+
 
 第三题（附加题）：实现购买存证的功能代码：
 
