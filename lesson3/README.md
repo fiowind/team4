@@ -29,8 +29,8 @@
 - Alice尝试删除存证，失败
 - Bob尝试删除存证，成功
 ![task2.1](./images/create_claim_confirmed_alice.png)
-![task2.2](./images/remove_claim_failed_alice.png)
-![task2.2](./images/remove_claim_ok_bob.png)
+![task2.2](./images/revoke_claim_failed_alice.png)
+![task2.2](./images/revoke_claim_ok_bob.png)
 ![task2.3](./images/transfer_claim_alice.png)
 ![task2.3](./images/transfer_claim_confirmed_bob.png)
 
