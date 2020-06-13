@@ -94,7 +94,7 @@ fn transfer_claim_error_claim_not_exists() {
 #[test]
 fn transfer_claim_error_not_claim_owner() {
 	new_test_ext().execute_with(|| {
-		let hash: Vec<u8> = [0,1,2].to_vec();
+		let hash: Vec<u8> = vec![1, 2, 3];
 		assert_ok!(PoeModule::create_claim(Origin::signed(1), hash.clone()));
 		assert_noop!(
 			PoeModule::transfer_claim(Origin::signed(2), hash, 3),

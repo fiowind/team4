@@ -4,7 +4,7 @@
 
 use frame_support::{
 	decl_module, decl_storage, decl_event, decl_error, dispatch, ensure,
-	traits::{Get},
+	traits::{Get, Currency, ExistenceRequirement,},
 };
 use frame_system::{self as system, ensure_signed};
 use sp_std::prelude::*;
@@ -25,24 +25,32 @@ pub trait Trait: system::Trait {
 
 	// 附加题答案
 	type MaxClaimLength: Get<u32>;
+
+	type Currency: Currency<Self::AccountId>;
 }
+
+type AccountIdOf<T> = <T as system::Trait>::AccountId;
+type BalanceOf<T> = <<T as Trait>::Currency as Currency<AccountIdOf<T>>>::Balance;
 
 // This pallet's storage items.
 decl_storage! {
 	// It is important to update your storage name so that your pallet's
 	// storage items are isolated from other pallets.
 	// ---------------------------------vvvvvvvvvvvvvv
-	trait Store for Module<T: Trait> as TemplateModule {
+	trait Store for Module<T: Trait> as PoeModule {
 		Proofs get(fn proofs): map hasher(blake2_128_concat) Vec<u8> => (T::AccountId, T::BlockNumber);
+		Prices get(fn prices): map hasher(blake2_128_concat) Vec<u8> => (BalanceOf<T>, T::BlockNumber);
 	}
 }
 
 // The pallet's events
 decl_event!(
-	pub enum Event<T> where AccountId = <T as system::Trait>::AccountId {
+	pub enum Event<T> where AccountId = <T as system::Trait>::AccountId, Price = BalanceOf<T> {
 		ClaimCreated(AccountId, Vec<u8>),
 		ClaimRevoked(AccountId, Vec<u8>),
 		ClaimTransferred(AccountId, Vec<u8>, AccountId),
+		ClaimPriceSet(AccountId, Vec<u8>, Price),
+		ClaimSold(AccountId, Vec<u8>, Price, AccountId),
 	}
 );
 
@@ -53,6 +61,9 @@ decl_error! {
 		ClaimNotExist,
 		NotClaimOwner,
 		ProofTooLong,
+		ClaimAlreadyOwned,
+		ClaimNotForSale,
+		BidPriceTooLow,
 	}
 }
 
@@ -118,6 +129,50 @@ decl_module! {
 			Proofs::<T>::insert(&claim, (dest.clone(), system::Module::<T>::block_number()));
 
 			Self::deposit_event(RawEvent::ClaimTransferred(sender, claim, dest));
+
+			Ok(())
+		}
+
+		#[weight = 1000]
+		pub fn set_claim_price(origin, claim: Vec<u8>, price: BalanceOf<T>) -> dispatch::DispatchResult {
+			let sender = ensure_signed(origin)?;
+
+			ensure!(Proofs::<T>::contains_key(&claim), Error::<T>::ClaimNotExist);
+
+			let (owner, _block_number) = Proofs::<T>::get(&claim);
+
+			ensure!(owner == sender, Error::<T>::NotClaimOwner);
+
+			Prices::<T>::insert(&claim, (price, system::Module::<T>::block_number()));
+
+			Self::deposit_event(RawEvent::ClaimPriceSet(sender, claim, price));
+
+			Ok(())
+		}
+
+		#[weight = 1000]
+		pub fn buy_claim(origin, claim: Vec<u8>, bid_price: BalanceOf<T>) -> dispatch::DispatchResult {
+			let sender = ensure_signed(origin)?;
+
+			ensure!(Proofs::<T>::contains_key(&claim), Error::<T>::ClaimNotExist);
+
+			let (owner, _block_number) = Proofs::<T>::get(&claim);
+
+			ensure!(owner != sender, Error::<T>::ClaimAlreadyOwned);
+
+			ensure!(Prices::<T>::contains_key(&claim), Error::<T>::ClaimNotForSale);
+
+			let (price, _block_number) = Prices::<T>::get(&claim);
+
+			ensure!(bid_price >= price, Error::<T>::BidPriceTooLow);
+
+			T::Currency::transfer(&sender, &owner, price, ExistenceRequirement::KeepAlive)?;
+
+			Proofs::<T>::insert(&claim, (sender.clone(), system::Module::<T>::block_number()));
+
+			Prices::<T>::remove(&claim);
+
+			Self::deposit_event(RawEvent::ClaimSold(owner, claim, price, sender));
 
 			Ok(())
 		}
