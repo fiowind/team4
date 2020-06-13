@@ -15,7 +15,7 @@
 * 撤销存证的测试用例；
 * 转移存证的测试用例；
 
-![task1.1](./images/carge_test.png)
+![task1.1](./images/cargo_test.png)
 
 第二题：编写存证模块的UI，包括
 
