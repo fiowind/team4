@@ -10,7 +10,7 @@
 4. 代码修改在本目录 substrate-node-template 和 substrate-front-end-template 的程序文件里。
 
 第一题：编写存证模块的单元测试代码，包括：
-
+  >![star](./images/lesson3-unit-tests.png)
 * 创建存证的测试用例；
 * 撤销存证的测试用例；
 * 转移存证的测试用例；
@@ -18,8 +18,11 @@
 第二题：编写存证模块的UI，包括
 
 * 创建存证的UI
+  >![star](./images/lesson3-create-claim-ui.png)
 * 删除存证的UI
+  >![star](./images/lesson3-revoke-claim-ui.png)
 * 转移存证的UI
+  >![star](./images/lesson3-transfer-claim-ui.png)
 
 第三题（附加题）：实现购买存证的功能代码：
 
