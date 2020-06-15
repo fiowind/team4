@@ -14,15 +14,28 @@
 * 创建存证的测试用例；
 * 撤销存证的测试用例；
 * 转移存证的测试用例；
+* 上架存证的测试用例；
+* 购买存证的测试用例；
+
+![x](imgs/test1.png)
 
 第二题：编写存证模块的UI，包括
 
 * 创建存证的UI
 * 删除存证的UI
+
+![x](imgs/ui1.png)
+
 * 转移存证的UI
+
+![x](imgs/ui2.png)
 
 第三题（附加题）：实现购买存证的功能代码：
 
 * 用户A为自己的某个存证记录设置价格；
+
+`lesson3/substrate-node-template/pallets/poe/src/lib.rs:132`
+
 * 用户B可以以一定的价格购买某个存证，当出价高于用户A设置的价格时，则以用户A设定的价格将费用从用户B转移到用户A，再将该存证进行转移。如果出价低于用户A的价格时，则不进行转移，返回错误。
 
+`lesson3/substrate-node-template/pallets/poe/src/lib.rs:148`
