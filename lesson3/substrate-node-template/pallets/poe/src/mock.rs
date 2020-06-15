@@ -1,8 +1,11 @@
 // Creating mock runtime here
 
+use sp_io::TestExternalities;
 use crate::{Module, Trait};
 use sp_core::H256;
 use frame_support::{impl_outer_origin, parameter_types, weights::Weight};
+
+
 use sp_runtime::{
 	traits::{BlakeTwo256, IdentityLookup}, testing::Header, Perbill,
 };
@@ -44,22 +47,59 @@ impl system::Trait for Test {
 	type AvailableBlockRatio = AvailableBlockRatio;
 	type Version = ();
 	type ModuleToIndex = ();
-	type AccountData = ();
+	type AccountData = balances::AccountData<u64>;
 	type OnNewAccount = ();
 	type OnKilledAccount = ();
 }
 
 parameter_types! {
+	pub const MinClaimLength: u32 = 3;
 	pub const MaxClaimLength: u32 = 6;
+	pub const ExistentialDeposit: u64 = 1;
 }
+
+
+impl balances::Trait for Test {
+	type Balance = u64;
+	type DustRemoval = ();
+	type Event = ();
+	type ExistentialDeposit = ExistentialDeposit;
+	type AccountStore = System;
+}
+
+
 impl Trait for Test {
 	type Event = ();
+	type MinClaimLength = MinClaimLength;
 	type MaxClaimLength = MaxClaimLength;
+	type Currency = Balances;
 }
 pub type PoeModule = Module<Test>;
+pub type System = system::Module<Test>;
+pub type Balances = balances::Module<Test>;
 
 // This function basically just builds a genesis storage key/value store according to
 // our desired mockup.
-pub fn new_test_ext() -> sp_io::TestExternalities {
-	system::GenesisConfig::default().build_storage::<Test>().unwrap().into()
+// pub fn new_test_ext() -> sp_io::TestExternalities {
+// 	system::GenesisConfig::default().build_storage::<Test>().unwrap().into()
+// }
+
+
+pub struct ExtBuilder;
+
+impl ExtBuilder {
+	pub fn build() -> TestExternalities {
+		let mut storage = system::GenesisConfig::default()
+			.build_storage::<Test>()
+			.unwrap();
+
+		balances::GenesisConfig::<Test> {
+			balances: vec![(1, 1000), (2, 1000), (3, 1000), (4, 1000)],
+		}
+		.assimilate_storage(&mut storage).unwrap();
+
+		let mut ext = TestExternalities::from(storage);
+		ext.execute_with(|| System::set_block_number(1));
+		ext
+	}
 }
