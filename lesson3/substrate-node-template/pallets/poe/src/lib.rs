@@ -39,9 +39,11 @@ decl_storage! {
 
 // The pallet's events
 decl_event!(
-	pub enum Event<T> where AccountId = <T as system::Trait>::AccountId {
+	pub enum Event<T> 
+	where AccountId = <T as system::Trait>::AccountId {
 		ClaimCreated(AccountId, Vec<u8>),
 		ClaimRevoked(AccountId, Vec<u8>),
+		ClaimTranferred(AccountId, Vec<u8>, AccountId),
 	}
 );
 
@@ -114,7 +116,9 @@ decl_module! {
 
 			let dest = T::Lookup::lookup(dest)?;
 
-			Proofs::<T>::insert(&claim, (dest, system::Module::<T>::block_number()));
+			Proofs::<T>::insert(&claim, (dest.clone(), system::Module::<T>::block_number()));
+
+			Self::deposit_event(RawEvent::ClaimTranferred(sender, claim, dest));
 
 			Ok(())
 		}
