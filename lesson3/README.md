@@ -15,11 +15,39 @@
 * 撤销存证的测试用例；
 * 转移存证的测试用例；
 
+![](./screenshots/PoE-Unit-Tests.png)
+
 第二题：编写存证模块的UI，包括
 
 * 创建存证的UI
+
+1. Create Claim
+![](./screenshots/Create-Claim-Start.png)
+
+2. Create Claim InBlock
+![](./screenshots/Create-Claim-InBlock.png)
+
+3. Create Claim finalized
+![](./screenshots/Create-Claim-Finalized.png)
+
 * 删除存证的UI
+
+1. Revoke Claim InBlock
+![](./screenshots/Revoke-Claim-InBlock.png)
+
+2. Revoke Claim finalized
+![](./screenshots/Revoke-Claim-Finalized.png)
+
 * 转移存证的UI
+
+1. Transfer Claim Start
+![](./screenshots/Transfer-Claim-Start.png)
+
+2. Transfer Claim InBlock
+![](./screenshots/Transfer-Claim-InBlock.png)
+
+3. Transfer Claim Finalized
+![](./screenshots/Transfer-Claim-Finalized.png)
 
 第三题（附加题）：实现购买存证的功能代码：
 
